@@ -145,24 +145,21 @@ header {
 }
 .circle-2{
     background-color: #eb0000;
-    border-radius: 100%;
     width: 85%;
     height: 85%;
-    animation: circle-expand 2s 1s infinite ease-in-out;
+    border-radius: 100%;
+    animation: circle-expand 5s 0s infinite ease-in-out;
 }
 
 @keyframes circle-expand{
-    0% {
-        width: 85%;
-        height: 85%;
+    0%{
+        padding: 0;
     }
-    50% {
-        width: 90%;
-        height: 90%;
+    50%{
+        padding: 1px;
     }
     100%{
-        width: 85%;
-        height: 85%;
+        padding: 0;
     }
 }
 .h2-ranking {
