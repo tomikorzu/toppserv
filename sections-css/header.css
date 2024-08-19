@@ -16,22 +16,23 @@ header {
 .social-links {
   display: flex;
   gap: 15px;
+  align-items: center;
 }
 .social-link-a {
 }
 .social-link-icon {
-  color: #333;
+  color: #000;
   transition: all 0.4s;
   font-size: 28px;
 }
 .social-link-icon:hover {
-  color: #000;
+  color: #333;
 }
 .toggle-btn {
   appearance: none;
   border: none;
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   position: relative;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
