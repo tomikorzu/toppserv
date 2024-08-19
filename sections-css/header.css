@@ -6,6 +6,7 @@ header {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
 }
 .logo {
 }
@@ -106,18 +107,77 @@ header {
   display: none;
 }
 .ranking {
+    margin-top: 60px;
+    display: flex;
+    gap: 60px;
 }
 .ranking-h2-circle {
+    position: relative;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+}
+.ranking-h2-circle::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(99.8%);
+    z-index: -1;
+    height: 100%;
+    clip-path: polygon(0 0, 0% 100%, 25% 100%);
+    background-color: #D9D9D9;
 }
 .circle-ranking {
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    border: 2px solid #eb0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.h2-ranking {
-}
-.players-ranking {
-}
-.player {
+.circle-2{
+    background-color: #eb0000;
+    border-radius: 100%;
+    width: 85%;
+    height: 85%;
+    animation: circle-expand 2s 1s infinite ease-in-out;
 }
 
+@keyframes circle-expand{
+    0% {
+        width: 85%;
+        height: 85%;
+    }
+    50% {
+        width: 90%;
+        height: 90%;
+    }
+    100%{
+        width: 85%;
+        height: 85%;
+    }
+}
+.h2-ranking {
+    width: max-content;
+    text-transform: uppercase;
+}
+.players-ranking {
+    display: flex;
+    list-style:auto;
+    gap: 50px;
+    font-weight: 600;
+    font-size: 1em;
+}
+.player {
+    width: max-content;
+}
 @media (min-width: 768px) {
   .img-logo {
     width: 200px;
