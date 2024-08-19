@@ -127,6 +127,8 @@ header {
     display: none;
   }
   .section-links {
+    position: fixed;
+    width: 100%;
     display: flex;
     margin-top: 70px;
     text-transform: uppercase;
