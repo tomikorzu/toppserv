@@ -137,6 +137,7 @@ header {
   .nav-sections-links {
     color: #fff;
     padding: 25px 10px;
+    font-weight: 500;
     transition: all 0.4s;
   }
   .nav-sections-links:hover {
