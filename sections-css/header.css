@@ -74,7 +74,9 @@ header {
   transform: rotate(-45deg);
   width: 125%;
   transform-origin: 0% 100%;
-  background-color: #fff;
+}
+.toggle-btn.active .line{
+    background-color: #fff;
 }
 .toggle {
   position: fixed;
