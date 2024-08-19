@@ -107,12 +107,32 @@ header {
 }
 .ranking {
 }
+.ranking-h2-circle {
+}
+.circle-ranking {
+}
+.h2-ranking {
+}
+.players-ranking {
+}
+.player {
+}
 
 @media (min-width: 768px) {
   .img-logo {
     width: 200px;
   }
   .ranking {
+  }
+  .ranking-h2-circle {
+  }
+  .circle-ranking {
+  }
+  .h2-ranking {
+  }
+  .players-ranking {
+  }
+  .player {
   }
 }
 
@@ -147,6 +167,16 @@ header {
   }
   .ranking {
   }
+  .ranking-h2-circle {
+  }
+  .circle-ranking {
+  }
+  .h2-ranking {
+  }
+  .players-ranking {
+  }
+  .player {
+  }
 }
 
 @media (min-width: 1440px) {
@@ -154,5 +184,15 @@ header {
     font-size: 0.8em;
   }
   .ranking {
+  }
+  .ranking-h2-circle {
+  }
+  .circle-ranking {
+  }
+  .h2-ranking {
+  }
+  .players-ranking {
+  }
+  .player {
   }
 }
