@@ -12,8 +12,8 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  background-color: #03071a;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   scroll-behavior: smooth;
 }
 h1,
@@ -34,19 +34,19 @@ a {
   text-decoration: none;
 }
 h1{
-    font-size: 2em;
-}
-h2{
     font-size: 1.75em;
 }
-h3{
+h2{
     font-size: 1.5em;
 }
-h4{
+h3{
     font-size: 1.25em;
 }
-h5{
+h4{
     font-size: 1em;
+}
+h5{
+    font-size: .875em;
 }
 h6{
     font-size: .75em;
@@ -56,16 +56,16 @@ p{
 }
 @media (min-width: 768px){
     body{
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 @media (min-width: 1024px){
     body{
-        font-size: 20px;
+        font-size: 22px;
     }
 }
 @media (min-width:1440px){
     body{
-        font-size: 22px;
+        font-size: 24px;
     }
 }
