@@ -5,7 +5,7 @@ header {
   padding: 0 20px;
   position: fixed;
   left: 0;
-  right: 45px;
+  right: 0;
 }
 .logo {
 }
@@ -22,19 +22,17 @@ header {
 .social-link-icon {
   color: #333;
   transition: all 0.4s;
-  font-size: 1.75em;
+  font-size: 28px;
 }
 .social-link-icon:hover {
   color: #000;
 }
 .toggle-btn {
-  right: 20px;
-  top: 15px;
   appearance: none;
   border: none;
   width: 28px;
   height: 28px;
-  position: fixed;
+  position: relative;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
   z-index: 2;
