@@ -1,21 +1,27 @@
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: 
+  'logo . links'
+  'sections sections sections'
+  'rank rank rank';
   align-items: center;
   padding: 0 20px;
   position: fixed;
+  gap: 0px;
   left: 0;
   right: 0;
-  top: 0;
 }
 .logo {
+  grid-area: logo;
 }
 .img-logo {
   object-fit: contain;
   width: 160px;
 }
 .social-links {
+  grid-area: links;
   display: flex;
+  justify-content: end;
   gap: 15px;
   align-items: center;
 }
@@ -105,12 +111,13 @@ header {
 }
 .section-links {
   display: none;
+  grid-area: sections;
 }
 .ranking {
-    margin-top: 60px;
     display: flex;
     gap: 60px;
     overflow: hidden;
+    grid-area: rank;
 }
 .ranking-h2-circle {
     position: relative;
@@ -119,6 +126,7 @@ header {
     align-items: center;
     gap: 10px;
     padding: 0 10px;
+    z-index: -1;
 }
 .ranking-h2-circle::before{
     content: '';
@@ -165,6 +173,7 @@ header {
 .h2-ranking {
     width: max-content;
     text-transform: uppercase;
+    font-size: 1em;
 }
 .players-ranking {
     display: flex;
@@ -177,8 +186,11 @@ header {
     width: max-content;
 }
 @media (min-width: 768px) {
+  body{
+    font-size: 16px;
+  }
   .img-logo {
-    width: 200px;
+    /* width: 200px; */
   }
   .ranking {
   }
@@ -195,8 +207,14 @@ header {
 }
 
 @media (min-width: 1024px) {
+  body{
+    font-size: 18px;
+  }
   header {
     top: 0;
+  }
+  .img-logo{
+    width: 200px;
   }
   .toggle-btn {
     display: none;
@@ -205,10 +223,8 @@ header {
     display: none;
   }
   .section-links {
-    position: fixed;
     width: 100%;
     display: flex;
-    margin-top: 70px;
     text-transform: uppercase;
     font-size: 0.7em;
     align-items: center;
