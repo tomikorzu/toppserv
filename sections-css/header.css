@@ -19,6 +19,11 @@ header {
   display: flex;
   align-items: center;
 }
+.move-ranking{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .img-logo {
   object-fit: contain;
   width: 160px;
@@ -164,13 +169,22 @@ header {
 }
 .players-ranking {
   display: flex;
-  list-style: auto;
+  list-style: none;
   gap: 50px;
   font-weight: 600;
   font-size: 1em;
+  animation: playersSlide 1s;
 }
-.player {
+.player-ranking{
   width: max-content;
+}
+@keyframes playersSlide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-1000%);
+  }
 }
 @media (min-width: 768px) {
   .img-logo {
