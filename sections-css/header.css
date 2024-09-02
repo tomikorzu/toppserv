@@ -1,29 +1,39 @@
+body {
+  overflow: hidden;
+}
+
 header {
   display: grid;
-  grid-template-areas: 
-  'logo . links'
-  'sections sections sections'
-  'rank rank rank';
-  align-items: center;
-  padding: 0 20px;
+  grid-template-areas:
+    "logo social-links toggle-btn"
+    "section-links section-links section-links"
+    "ranking-h2-circle ranking-h2-circle ranking-h2-circle";
+  grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
-  gap: 0px;
   left: 0;
   right: 0;
+  top: 0;
 }
 .logo {
-  grid-area: logo;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+.move-ranking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .img-logo {
   object-fit: contain;
   width: 160px;
 }
 .social-links {
-  grid-area: links;
   display: flex;
   justify-content: end;
   gap: 15px;
   align-items: center;
+  padding-right: 20px;
 }
 .social-link-a {
 }
@@ -43,7 +53,7 @@ header {
   position: relative;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
-  z-index: 2;
+  z-index: 4;
 }
 .line {
   position: absolute;
@@ -86,7 +96,7 @@ header {
 }
 .toggle {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   right: 0;
   left: 0;
@@ -111,86 +121,96 @@ header {
 }
 .section-links {
   display: none;
-  grid-area: sections;
+  grid-column: span 3;
 }
 .ranking {
-    display: flex;
-    gap: 60px;
-    overflow: hidden;
-    grid-area: rank;
+  display: flex;
+  gap: 60px;
+  overflow: hidden;
+  grid-column: span 3;
 }
 .ranking-h2-circle {
-    position: relative;
-    background-color: #D9D9D9;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 0 10px;
-    z-index: -1;
+  position: relative;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  padding: 0 10px;
+  z-index: 2;
 }
-.ranking-h2-circle::before{
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-    transform: translateX(99.8%);
-    z-index: -1;
-    height: 100%;
-    clip-path: polygon(0 0, 0% 100%, 25% 100%);
-    background-color: #D9D9D9;
+.ranking-h2-circle::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  transform: translateX(99.8%);
+  z-index: -1;
+  height: 100%;
+  clip-path: polygon(0 0, 0% 100%, 25% 100%);
+  background-color: #d9d9d9;
 }
 .circle-ranking {
-    width: 25px;
-    height: 25px;
-    background-color: #fff;
-    border-radius: 100%;
-    position: relative;
-    border: 2px solid #eb0000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 100%;
+  position: relative;
+  border: 2px solid #eb0000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.circle-2{
-    background-color: #eb0000;
-    width: 85%;
-    height: 85%;
-    border-radius: 100%;
-    animation: circle-expand 5s 0s infinite ease-in-out;
+.circle-2 {
+  background-color: #eb0000;
+  width: 85%;
+  height: 85%;
+  border-radius: 100%;
+  animation: circle-expand 2s infinite;
 }
 
-@keyframes circle-expand{
-    0%{
-        padding: 0;
-    }
-    50%{
-        padding: 1px;
-    }
-    100%{
-        padding: 0;
-    }
+@keyframes circle-expand {
+  0% {
+    width: 85%;
+    height: 85%;
+  }
+  50% {
+    width: 90%;
+    height: 90%;
+  }
+  100% {
+    width: 85%;
+    height: 85%;
+  }
 }
+
 .h2-ranking {
-    width: max-content;
-    text-transform: uppercase;
-    font-size: 1em;
+  width: max-content;
+  text-transform: uppercase;
 }
 .players-ranking {
-    display: flex;
-    list-style:auto;
-    gap: 50px;
-    font-weight: 600;
-    font-size: 1em;
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  font-weight: 600;
+  font-size: 1em;
+  animation: playersSlide 20s infinite;
 }
-.player {
-    width: max-content;
+.player-ranking {
+  width: max-content;
+}
+@keyframes playersSlide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 @media (min-width: 768px) {
-  body{
-    font-size: 16px;
-  }
   .img-logo {
-    /* width: 200px; */
+    width: 200px;
   }
   .ranking {
   }
@@ -207,14 +227,8 @@ header {
 }
 
 @media (min-width: 1024px) {
-  body{
-    font-size: 18px;
-  }
   header {
     top: 0;
-  }
-  .img-logo{
-    width: 200px;
   }
   .toggle-btn {
     display: none;
