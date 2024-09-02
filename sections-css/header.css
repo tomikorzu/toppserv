@@ -138,6 +138,7 @@ header {
   gap: 10px;
   font-size: 14px;
   padding: 0 10px;
+  z-index: 2;
 }
 .ranking-h2-circle::before {
   content: "";
@@ -173,17 +174,17 @@ header {
   gap: 50px;
   font-weight: 600;
   font-size: 1em;
-  animation: playersSlide 1s;
+  animation: playersSlide 20s infinite;
 }
 .player-ranking{
   width: max-content;
 }
 @keyframes playersSlide {
-  0% {
-    transform: translateX(100%);
+  from {
+    transform: translateX(0);
   }
-  100% {
-    transform: translateX(-1000%);
+  to {
+    transform: translateX(-100%);
   }
 }
 @media (min-width: 768px) {
