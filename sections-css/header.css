@@ -130,6 +130,7 @@ header {
   gap: 200px;
   overflow: hidden;
   grid-column: span 3;
+  pointer-events: none;
 }
 .ranking-h2-circle {
   position: relative;
