@@ -34,6 +34,7 @@ header {
   gap: 15px;
   align-items: center;
   padding-right: 20px;
+  margin: 15px 0;
 }
 .social-link-a {
 }
@@ -125,7 +126,7 @@ header {
 }
 .ranking {
   display: flex;
-  gap: 60px;
+  gap: 200px;
   overflow: hidden;
   grid-column: span 3;
 }
@@ -135,7 +136,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 14px;
+  font-size: .75em;
   padding: 0 10px;
   z-index: 2;
 }
@@ -192,10 +193,11 @@ header {
 .players-ranking {
   display: flex;
   list-style: none;
-  gap: 50px;
+  gap: 25px;
   font-weight: 600;
-  font-size: 1em;
-  animation: playersSlide 20s infinite;
+  font-size: .75em;
+  animation: playersSlide 20s infinite linear;
+  margin: 15px 0;
 }
 .player-ranking {
   width: max-content;
@@ -246,7 +248,7 @@ header {
   }
   .nav-sections-links {
     color: #fff;
-    padding: 25px 10px;
+    padding: 20px 10px;
     font-weight: 500;
     transition: all 0.4s;
   }
