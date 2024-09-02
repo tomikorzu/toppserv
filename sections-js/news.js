@@ -1,5 +1,5 @@
 const newsContainer = document.querySelector(".news-container");
-
+const moreNews = document.getElementById("more-news");
 const newContent = [
   {
     img: "https://static.toiimg.com/thumb/msid-112939866,width-400,resizemode-4/112939866.jpg",
@@ -42,6 +42,11 @@ const newContent = [
     descriptionImage: "Juan Martín del Potro",
   },
 ];
+if(newContent.length >= 4){
+    moreNews.addEventListener("click", viewMore);
+} else{
+    moreNews.style.PointerEvent = 'none'
+}
 createNew();
 function createNew() {
   newContent.forEach((news) => {
@@ -56,4 +61,8 @@ function createNew() {
                             </div>`;
     newsContainer.appendChild(newCard);
   });
+}
+
+function viewMore(){
+    newsContainer.style.transform = 'translateX(calc(-100% - 20px))';
 }

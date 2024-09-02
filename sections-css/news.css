@@ -2,12 +2,34 @@ body {
   overflow: auto;
 }
 .news {
-  margin-top: 165px;
-  padding: 20px;
+  padding: 20px 20px 50px;
   display: flex;
   flex-direction: column;
   gap: 15px;
   background-color: #eaeaea;
+  position: relative;
+}
+.more-news{
+  position: absolute;
+  bottom: 5px;
+  right: 15px;
+  transition: all .4s;
+  opacity: 0;
+  border-radius: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: #f5f5f5;
+}
+.more-news:hover {
+  background-color: #5c5959;
+}
+.more-icon{
+  font-size: 1.25em;
+}
+.news:hover .more-news {
+  opacity: 1;
+
 }
 .new-img {
   width: 100%;
@@ -50,6 +72,7 @@ body {
   width: 100%;
   height: 100%;
   gap: 10px;
+  transition: all 0.4s ease-in-out;
 }
 .new {
   background-color: #666666;

@@ -92,3 +92,8 @@ function renderRanking() {
     });
 }
 renderRanking();
+
+const header = document.querySelector('header')
+const headerHeight = header.offsetHeight;
+const news = document.getElementById('news')
+news.style.marginTop = `${headerHeight}px`
