@@ -41,17 +41,19 @@ const newContent = [
       "El tenis argentino sigue creciendo y en el último torneo de la ATP, el argentino Juan Martín del Potro se consagró campeón.",
     descriptionImage: "Juan Martín del Potro",
   },
-  
 ];
-newContent.forEach((news) => {
-  let newCard = document.createElement("div");
-  newCard.classList.add("new");
-  newCard.innerHTML = `
-  <img src="${news.img}" alt="${news.descriptionImage}" class="new-img" id="new-img">
-  <div class="text-news">
-  <h4 class="new-title">${news.title}</h4>
-                        <h6 class="time">${news.date}</h6>
-                        <p class="new-text">${news.description}</p>
-                        </div>`;
-  newsContainer.appendChild(newCard);
-});
+createNew();
+function createNew() {
+  newContent.forEach((news) => {
+    let newCard = document.createElement("div");
+    newCard.classList.add("new");
+    newCard.innerHTML = `
+      <img src="${news.img}" alt="${news.descriptionImage}" class="new-img" id="new-img">
+      <div class="text-news">
+      <h4 class="new-title">${news.title}</h4>
+                            <h6 class="time">${news.date}</h6>
+                            <p class="new-text">${news.description}</p>
+                            </div>`;
+    newsContainer.appendChild(newCard);
+  });
+}
