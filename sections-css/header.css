@@ -4,10 +4,10 @@ body {
 
 header {
   display: grid;
-  grid-template-areas: 
-    'logo social-links toggle-btn'
-    'section-links section-links section-links'
-    'ranking-h2-circle ranking-h2-circle ranking-h2-circle';
+  grid-template-areas:
+    "logo social-links toggle-btn"
+    "section-links section-links section-links"
+    "ranking-h2-circle ranking-h2-circle ranking-h2-circle";
   grid-template-columns: 1fr 1fr 1fr;
   position: fixed;
   left: 0;
@@ -19,7 +19,7 @@ header {
   display: flex;
   align-items: center;
 }
-.move-ranking{
+.move-ranking {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +53,7 @@ header {
   position: relative;
   background-color: transparent;
   transition: all 0.4s ease-in-out;
-  z-index: 2;
+  z-index: 4;
 }
 .line {
   position: absolute;
@@ -96,7 +96,7 @@ header {
 }
 .toggle {
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   top: 0;
   right: 0;
   left: 0;
@@ -122,7 +122,6 @@ header {
 .section-links {
   display: none;
   grid-column: span 3;
-
 }
 .ranking {
   display: flex;
@@ -153,8 +152,8 @@ header {
   background-color: #d9d9d9;
 }
 .circle-ranking {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #fff;
   border-radius: 100%;
   position: relative;
@@ -162,6 +161,28 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.circle-2 {
+  background-color: #eb0000;
+  width: 85%;
+  height: 85%;
+  border-radius: 100%;
+  animation: circle-expand 2s infinite;
+}
+
+@keyframes circle-expand {
+  0% {
+    width: 85%;
+    height: 85%;
+  }
+  50% {
+    width: 90%;
+    height: 90%;
+  }
+  100% {
+    width: 85%;
+    height: 85%;
+  }
 }
 
 .h2-ranking {
@@ -176,7 +197,7 @@ header {
   font-size: 1em;
   animation: playersSlide 20s infinite;
 }
-.player-ranking{
+.player-ranking {
   width: max-content;
 }
 @keyframes playersSlide {

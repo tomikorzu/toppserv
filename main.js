@@ -50,11 +50,11 @@ let topPlayers = [
   },
   {
     position: 3,
-    name: "Player 3",
+    name: "Nadal",
   },
   {
     position: 4,
-    name: "Player 4",
+    name: "Lukaku",
   },
   {
     position: 5,
